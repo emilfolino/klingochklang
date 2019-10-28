@@ -11,7 +11,7 @@ do
         mkdir -p submissions/$i
     fi;
     dbwebb --yes --force download kmom06 $i
-    cp -r me/kmom06/analyzer/ submissions/$i/
+    cp -r ../me/kmom06/analyzer/ submissions/$i/
 done
 
 # python3 check-similarity.py
