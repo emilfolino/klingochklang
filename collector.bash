@@ -14,4 +14,4 @@ do
     cp -r ../me/kmom06/analyzer/ submissions/$i/
 done
 
-# python3 check-similarity.py
+python3 check-similarity.py
