@@ -4,25 +4,15 @@ import os
 userid = 90529531
 
 base_folder = "base"
-submissions_folder = "submissions"
-
+submissions_folder = "submission"
 
 m = mosspy.Moss(userid, "python")
 
-m.addBaseFile(base_folder + "/main.py")
-m.addBaseFile(base_folder + "/menu.py")
-m.addBaseFile(base_folder + "/analyzer.py")
+m.addBaseFile(base_folder + "/exam.py")
 
-# Submission Files
-generator = os.walk('submissions')
-dirs = next(generator)[1]
+m.addFilesByWildcard("submission/*_exam.py")
 
-for dir in dirs:
-    print(submissions_folder + "/" + dir + "/*.py")
-    m.addFilesByWildcard(submissions_folder + "/" + dir + "/*.py")
-
-
-url = m.send() # Submission Report URL
+url = m.send()
 
 print ("Report Url: " + url)
 
